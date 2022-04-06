@@ -63,9 +63,7 @@ else{
         // Vérification longueur de l'array, si elle est vide l'ID reste 1
         $idArrayLength = count($idArray);
         if($idArrayLength > 0){
-            print_r($idArray);
             for($i = 0; $i<$idArrayLength; $i++){
-                echo '<br> id de  ' . $i .' = '. ($idArray[$i]) . ' id de  ' . ($i+1) .' = '. $idArray[($i+1)];
                 if(array_key_exists(($i+1), $idArray) == false ||($idArray[$i] + 1) != $idArray[($i+1)]){
                     
                     $idUtilisateur = ($idArray[$i] + 1);
