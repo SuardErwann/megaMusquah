@@ -1,0 +1,384 @@
+/*
+* CONSTANTES
+*/
+:root {
+  --blanc: #fafaff;
+  --bleu: #1f2eec;
+  --orange: #f96244;
+}
+
+.display-none {
+  display: none;
+}
+
+.display-block {
+  display: block;
+}
+
+.btn-orange {
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+  cursor: pointer;
+  background: #f96244;
+  color: #fafaff;
+  border: 3px solid transparent;
+  border-radius: 50px;
+  box-shadow: 0 5px 15px black;
+}
+.btn-orange:hover {
+  background: #fafaff;
+  border: 3px solid #f96244;
+  color: #f96244;
+}
+
+.btn-blanc-orange {
+  cursor: pointer;
+  background: #fafaff;
+  color: #f96244;
+  border: 3px solid #f96244;
+  border-radius: 50px;
+}
+.btn-blanc-orange:hover {
+  background: #fafaff;
+  border: 3px solid #f96244;
+  color: #f96244;
+}
+
+.btn-blanc-bleu {
+  background: #fafaff;
+  border: 3px solid #1f2eec;
+  color: #1f2eec;
+  border-radius: 50px;
+}
+.btn-blanc-bleu:hover {
+  background: #1f2eec;
+  border: 3px solid transparent;
+  color: #fafaff;
+}
+
+.titre-section {
+  margin: 3em;
+  display: flex;
+  justify-content: center;
+  height: 5vh;
+}
+.titre-section .img-titre {
+  width: 50px;
+  margin-right: 2em;
+}
+
+/*
+* BODY
+*/
+body {
+  background-color: #fafaff;
+  font-family: "Lexend", sans-serif;
+}
+
+/*
+* INSCRIPTION / CONNNEXION
+*/
+
+/* AJOUT FORM INSCRIPTION ERWANN */
+.cachee{
+  visibility: hidden;
+}
+#testPopUpInscription{
+  display: block;
+  position: fixed;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: auto;
+  height: 50%;
+  width: 50%;
+  background-color: grey;
+}
+nav {
+  margin: 2em;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+nav .logo-musquash-navbar {
+  width: 20%;
+  min-width: 130px;
+}
+nav .nav-btn-container {
+  display: flex;
+  gap: 20px;
+  justify-content: space-between;
+}
+nav .nav-btn-container form {
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+}
+nav .nav-btn-container div {
+  display: flex;
+  border-radius: 2em;
+  background-color: transparent;
+  max-height: 40px;
+  cursor: pointer;
+}
+nav .nav-btn-container div input {
+  width: 100%;
+  background-color: transparent;
+  border: transparent;
+  font-family: "Lexend";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 28px;
+  margin-right: 1em;
+}
+nav .nav-btn-container .btn-connexion {
+  background: #1f2eec;
+  border: solid transparent;
+}
+nav .nav-btn-container .btn-connexion input {
+  cursor: pointer;
+  color: #fafaff;
+}
+nav .nav-btn-container .btn-connexion svg {
+  stroke: #fafaff;
+  stroke-width: 2.5;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+nav .nav-btn-container .btn-connexion:hover {
+  background: transparent;
+  border: solid #1f2eec;
+}
+nav .nav-btn-container .btn-connexion:hover input {
+  color: #1f2eec;
+}
+nav .nav-btn-container .btn-connexion:hover svg {
+  stroke: #1f2eec;
+}
+nav .nav-btn-container .btn-inscription {
+  display: flex;
+  align-items: center;
+  background: #fafaff;
+  border: solid #f96244;
+}
+nav .nav-btn-container .btn-inscription input {
+  cursor: pointer;
+  color: #f96244;
+}
+nav .nav-btn-container .btn-inscription svg {
+  margin-left: 1em;
+}
+nav .nav-btn-container .btn-inscription:hover {
+  background: #f96244;
+  border: solid transparent;
+}
+nav .nav-btn-container .btn-inscription:hover input {
+  color: #fafaff;
+}
+nav .nav-btn-container .btn-inscription:hover svg {
+  stroke: #fafaff;
+  stroke-width: 1.5;
+}
+nav .btn-profile {
+  display: none;
+}
+
+/*
+  * HERO + OFFRE PROMOS
+  */
+.hero-container {
+  max-height: 55vh;
+  display: grid;
+  grid-template-columns: 80% auto;
+  background-image: url(/ressources/images/hero-salle.png);
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+  margin-bottom: 1.4em;
+}
+.hero-container .presentation {
+  width: 80%;
+  padding: 3em 1em;
+}
+.hero-container .presentation h1 {
+  color: #f96244;
+  font-size: 3vw;
+}
+.hero-container .presentation p {
+  color: #fafaff;
+  font-size: 2vw;
+}
+.hero-container .offre-promos {
+  display: grid;
+  grid-template-rows: auto auto;
+  color: #fafaff;
+}
+.hero-container .offre-promos .offre1 {
+  background-color: red;
+  padding: 1em;
+}
+.hero-container .offre-promos .offre2 {
+  padding: 1em;
+  background-color: rgb(179, 255, 0);
+}
+
+/*
+* NAVIGATION MUSCU/SQUASH/GYM
+*/
+.navigation {
+  width: 100%;
+  position: relative;
+  margin-bottom: 2em;
+  display: grid;
+  grid-template-columns: 24% 50% 24%;
+  padding: 0 2em;
+}
+.navigation a {
+  border-radius: 50px;
+  color: #fafaff;
+}
+.navigation .nav {
+  text-align: center;
+  margin-left: auto;
+  margin-right: auto;
+  display: block;
+  cursor: pointer;
+}
+.navigation .illu-hero {
+  margin-left: auto;
+  margin-right: auto;
+  display: block;
+}
+.navigation a:hover {
+  transform: scale(1.1);
+}
+.navigation .nav.bleu {
+  width: 100%;
+  height: 100%;
+}
+.navigation .bleu.gauche {
+  background: linear-gradient(117.36deg, rgba(31, 46, 236, 0.8) 0%, rgba(31, 46, 236, 0.464) 100%);
+}
+.navigation .bleu.droite {
+  background: linear-gradient(242.64deg, rgba(31, 46, 236, 0.8) 0%, rgba(31, 46, 236, 0.464) 100%);
+}
+.navigation .nav.orange {
+  width: 100%;
+  background: linear-gradient(143.76deg, rgba(249, 98, 68, 0.8) 47.15%, rgba(249, 98, 68, 0.612806) 83.1%, rgba(249, 98, 68, 0.4) 113.68%);
+}
+
+/*
+* FORMULES
+*/
+.container-formules {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  height: calc(100% + 30px);
+}
+.container-formules .formule {
+  background-color: #1f2eec;
+  border-radius: 50px;
+  width: 95%;
+  display: grid;
+  grid-template-columns: 40% 60%;
+  grid-template-rows: auto;
+  padding: 1em;
+  color: var(--blanc);
+  margin-bottom: 3em;
+}
+.container-formules .formule .titre {
+  display: flex;
+  gap: 30px;
+}
+.container-formules .formule .infos {
+  padding: 1em;
+}
+.container-formules .formule .images img {
+  border-radius: 28px;
+}
+.container-formules .formule .plus-dinfos {
+  position: relative;
+  z-index: 2;
+  top: -10%;
+  right: 10%;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+.container-formules .formule .nos-adhesions {
+  margin-top: 1em;
+  width: 100%;
+  display: flex;
+  grid-column-end: span 2;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.container-services {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+
+/*
+* MEDIA QUERIES RESPONSIVE
+*/
+@media screen and (max-width: 900px) {
+  .hero-container {
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 1fr;
+  }
+  .hero-container .presentation h1 {
+    font-size: 100%;
+  }
+  .hero-container .presentation p {
+    font-size: 3vw;
+  }
+  .hero-container .offre-promos {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .container-formules .formule {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto auto auto;
+  }
+}
+@media screen and (max-width: 400px) {
+  nav .nav-btn-container {
+    display: none;
+  }
+  nav button {
+    cursor: pointer;
+    background-color: transparent;
+    border: 0px transparent;
+  }
+  nav .btn-profile {
+    display: block;
+  }
+
+  .hero-container .presentation h1 {
+    font-size: 7vw;
+  }
+  .hero-container .offre-promos {
+    grid-template-columns: 1fr;
+    grid-template-rows: auto auto;
+    transform: scale(0.9);
+  }
+}
+@media screen and (max-width: 610px) {
+  nav .nav-btn-container {
+    display: none;
+  }
+  nav button {
+    cursor: pointer;
+    background-color: transparent;
+    border: 0px transparent;
+  }
+  nav .btn-profile {
+    display: block;
+  }
+}/*# sourceMappingURL=style.css.map */
